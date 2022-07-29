@@ -26,5 +26,5 @@ return require('packer').startup(function(use)
   -- Interface
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
-  --use { 'nvim-lualine/lualine.nvim', require = { 'kyazdani42/nvim-web-devicons', opt = true } }
+  use { 'nvim-lualine/lualine.nvim', require = { 'kyazdani42/nvim-web-devicons', opt = true } }
 end)

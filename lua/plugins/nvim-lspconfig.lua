@@ -17,3 +17,5 @@ for _, server in ipairs(servers) do
     on_attach = on_attach,
   }
 end
+
+nvim_lsp.jsonls.setup{}

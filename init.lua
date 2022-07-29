@@ -7,7 +7,7 @@ require('plugins.nvim-treesitter')
 require('plugins.gitsigns')
 require('plugins.nvim-tree')
 require('plugins.telescope')
---require('plugins.nvim-lualine')
+require('plugins.nvim-lualine')
 require('plugins.nvim-autopairs')
 require('plugins.nvim-ts-autotag')
 
