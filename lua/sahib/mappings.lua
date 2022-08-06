@@ -1,12 +1,22 @@
+--------------------------------------------------------------------------------
+--
 -- General Mappings
+--
+
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true })
+-- Jump to previous buffer
 vim.keymap.set("n", "<leader>e", ":b#<CR>", { noremap = true })
+-- Open LazyGit on a terminal buffer and enter Terminal-mode
+vim.keymap.set("n", "<leader>gg", ":terminal lazygit<CR>i", { noremap = true })
 
 --------------------------------------------------------------------------------
 --
 -- Plugin: nvim-tree
 --
+
+-- Toggle Nvim Tree
 vim.keymap.set("n", "<leader>1", ":NvimTreeToggle<CR>", { noremap = true })
+-- Open Nvim Tree and locate the current file
 vim.keymap.set("n", "<leader>2", ":NvimTreeFindFile<CR>", { noremap = true })
 
 --------------------------------------------------------------------------------
@@ -25,6 +35,8 @@ vim.g.user_emmet_leader_key = "<c-z>"
 --
 -- Plugin: Gitsigns
 --
+
+-- Toggle git blame
 vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", { noremap = true })
 
 --------------------------------------------------------------------------------
