@@ -1,0 +1,3 @@
+vim.opt.indentexpr = ""
+vim.opt.smartindent = true
+vim.opt.autoindent = true
