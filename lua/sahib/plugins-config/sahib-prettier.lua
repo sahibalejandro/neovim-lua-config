@@ -1,0 +1,1 @@
+require("sahib-prettier").setup()

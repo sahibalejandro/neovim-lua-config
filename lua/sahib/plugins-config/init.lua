@@ -1,0 +1,8 @@
+require "sahib.plugins-config.lualine"
+require "sahib.plugins-config.nightfox"
+require "sahib.plugins-config.gitsigns"
+require "sahib.plugins-config.emmet-vim"
+require "sahib.plugins-config.nvim-tree"
+require "sahib.plugins-config.nvim-lspconfig"
+require "sahib.plugins-config.sahib-prettier"
+require "sahib.plugins-config.nvim-treesitter"

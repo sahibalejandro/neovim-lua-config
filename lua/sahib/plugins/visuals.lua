@@ -1,6 +1,0 @@
-vim.cmd("colorscheme nightfox")
-vim.cmd("hi Normal guibg=none")
-vim.cmd("hi NormalNC guibg=none")
-vim.cmd("hi EndOfBuffer guifg=grey")
-vim.cmd("hi StatusLine guibg=none")
-vim.cmd("hi StatusLineNC guibg=none")
