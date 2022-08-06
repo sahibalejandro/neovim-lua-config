@@ -9,9 +9,15 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 vim.cmd "colorscheme duskfox"
---vim.cmd "hi Normal guibg=none"
---vim.cmd "hi NormalNC guibg=none"
---vim.cmd "hi EndOfBuffer guifg=grey"
+-- Highlights when using iTerm
+vim.cmd "hi Normal guibg=none"
+vim.cmd "hi NormalNC guibg=none"
+vim.cmd "hi NvimTreeNormal guibg=none"
+vim.cmd "hi EndOfBuffer guifg=#f3f2f7"
+vim.cmd "hi TelescopeBorder guifg=#868397"
+vim.cmd "hi TelescopeTitle guifg=#f3f2f7"
+vim.cmd "hi link TelescopePromptCounter TelescopeNormal"
+vim.cmd "hi link TelescopeSelection Visual"
 --vim.cmd "hi StatusLine guibg=none"
 --vim.cmd "hi StatusLineNC guibg=none"
 
