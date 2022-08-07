@@ -18,8 +18,6 @@ vim.cmd "hi TelescopeBorder guifg=#868397"
 vim.cmd "hi TelescopeTitle guifg=#f3f2f7"
 vim.cmd "hi link TelescopePromptCounter TelescopeNormal"
 vim.cmd "hi link TelescopeSelection Visual"
---vim.cmd "hi StatusLine guibg=none"
---vim.cmd "hi StatusLineNC guibg=none"
 
 -- Indentation
 vim.opt.tabstop = 2
