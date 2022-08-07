@@ -6,8 +6,6 @@
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true })
 -- Jump to previous buffer
 vim.keymap.set("n", "<leader>e", ":b#<CR>", { noremap = true })
--- Open LazyGit on a terminal buffer and enter Terminal-mode
-vim.keymap.set("n", "<leader>gg", ":terminal lazygit<CR>i", { noremap = true })
 
 --------------------------------------------------------------------------------
 --
@@ -21,7 +19,13 @@ vim.keymap.set("n", "<leader>2", ":NvimTreeFindFile<CR>", { noremap = true })
 
 --------------------------------------------------------------------------------
 --
--- Plugin: Rename Current File
+-- Plugin: Sahib LazyGit
+--
+vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { noremap = true })
+
+--------------------------------------------------------------------------------
+--
+-- Plugin: Sahib Rename Current File
 --
 vim.keymap.set("n", "<leader>R", ":RenameCurrentFile<CR>", { noremap = true })
 

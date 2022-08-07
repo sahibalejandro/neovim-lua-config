@@ -14,4 +14,5 @@ return require("packer").startup(function(use)
   -- Sahib Plugins
   use "~/.config/nvim/lua/sahib/plugins/sahib-rename.nvim"
   use "~/.config/nvim/lua/sahib/plugins/sahib-prettier.nvim"
+  use "~/.config/nvim/lua/sahib/plugins/sahib-lazygit.nvim"
 end)
