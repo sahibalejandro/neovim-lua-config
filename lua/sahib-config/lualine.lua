@@ -8,6 +8,7 @@ require('lualine').setup({
 
   sections = {
     lualine_a = {
+      -- use path = 1 to display the relative path name
       { 'filename', path = 1 },
     },
     lualine_b = { 'branch' },
