@@ -1,5 +1,5 @@
 require("nightfox").setup {
   options = {
-    dim_inactive = true,
+    dim_inactive = false,
   },
 }

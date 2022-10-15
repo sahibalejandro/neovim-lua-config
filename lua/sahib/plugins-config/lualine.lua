@@ -1,7 +1,8 @@
 require("lualine").setup {
   options = {
-    component_separators = { left = ">", right = "<" },
-    section_separators = { left = "", right = "" },
+    theme = "nord",
+    --component_separators = { left = ">", right = "<" },
+    --section_separators = { left = "", right = "" },
     refresh = { statusline = 100 },
   },
   sections = {
@@ -9,7 +10,7 @@ require("lualine").setup {
     lualine_b = { "branch" },
     lualine_c = { "diff" },
     lualine_x = { "diagnostics", "filetype" },
-    lualine_y = { "%l:%c / %L" },
+    lualine_y = { "%l:%c - %L" },
     lualine_z = { "progress" },
   },
   inactive_sections = {

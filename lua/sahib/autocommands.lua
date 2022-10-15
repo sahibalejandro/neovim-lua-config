@@ -1,0 +1,13 @@
+--local group = vim.api.nvim_create_augroup("sahib-folds", { clear = true })
+--
+--vim.api.nvim_create_autocmd("BufWinLeave", {
+--  group = group,
+--  pattern = "*",
+--  command = "silent! mkview",
+--})
+--
+--vim.api.nvim_create_autocmd("BufWinEnter", {
+--  group = group,
+--  pattern = "*",
+--  command = "silent! loadview",
+--})

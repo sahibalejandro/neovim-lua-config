@@ -5,7 +5,7 @@
 
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true })
 -- Jump to previous buffer
-vim.keymap.set("n", "<leader>e", ":b#<CR>", { noremap = true })
+vim.keymap.set("n", "<leader><leader>", ":b#<CR>", { noremap = true })
 
 --------------------------------------------------------------------------------
 --
