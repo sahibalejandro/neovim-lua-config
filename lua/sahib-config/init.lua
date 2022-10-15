@@ -1,0 +1,10 @@
+require 'sahib-config.packer'
+require 'sahib-config.nvim-treesitter'
+require 'sahib-config.nvim-tree'
+require 'sahib-config.nvim-cmp'
+require 'sahib-config.nvim-lspconfig'
+require 'sahib-config.lualine'
+require 'sahib-config.tokyonight'
+
+require 'sahib-config.vim-options'
+require 'sahib-config.mappings'
