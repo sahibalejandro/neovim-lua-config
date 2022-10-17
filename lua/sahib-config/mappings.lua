@@ -1,5 +1,7 @@
 vim.keymap.set('i', 'jk', '<esc>')
 
+vim.keymap.set('n', '<leader><leader>', ':b#<cr>')
+
 -- Telescope
 local telescope = require 'telescope.builtin'
 vim.keymap.set('n', '<leader>o', telescope.find_files)
