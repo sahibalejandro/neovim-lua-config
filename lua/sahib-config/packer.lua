@@ -9,6 +9,7 @@ return require('packer').startup(function (use)
   use 'folke/tokyonight.nvim'
   use 'nvim-lualine/lualine.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'lewis6991/gitsigns.nvim', tag = 'release' }
 
   -- LSP
   use { 'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig' }
