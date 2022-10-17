@@ -17,8 +17,15 @@ local on_attach = function (client, buffer)
   vim.keymap.set('n', '<leader>lR', vim.lsp.buf.type_definition, opts)
 end
 
--- TypeScript (js, jsx, ts, tsx)
-require('lspconfig').tsserver.setup({
+local serverOptions = {
   on_attach = on_attach,
   capabilities = capabilities,
-});
+}
+
+local lspConfig = require('lspconfig')
+
+-- TypeScript (js, jsx, ts, tsx)
+lspConfig.tsserver.setup(serverOptions);
+
+-- Vue.js
+lspConfig.volar.setup(serverOptions);
