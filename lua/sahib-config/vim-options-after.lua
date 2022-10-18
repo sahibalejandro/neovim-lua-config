@@ -1,5 +1,4 @@
 -- General
-vim.g.mapleader = ' '
 vim.o.mouse = ''
 
 -- Visuals
