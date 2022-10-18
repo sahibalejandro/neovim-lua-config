@@ -1,5 +1,6 @@
 -- General
 vim.g.mapleader = ' '
+vim.o.mouse = ''
 
 -- Visuals
 vim.cmd 'colorscheme tokyonight'
