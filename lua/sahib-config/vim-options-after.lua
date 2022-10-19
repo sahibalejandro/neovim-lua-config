@@ -1,5 +1,6 @@
 -- General
 vim.o.mouse = ''
+vim.o.wrap = false
 
 -- Visuals
 vim.cmd 'colorscheme tokyonight'
