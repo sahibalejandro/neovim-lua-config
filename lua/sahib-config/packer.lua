@@ -13,6 +13,7 @@ return require('packer').startup(function (use)
 
   -- LSP
   use { 'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig' }
+  use { 'jose-elias-alvarez/null-ls.nvim' }
 
   -- Autocompletion
   use { 'hrsh7th/nvim-cmp', requires = { 'hrsh7th/cmp-path', 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-nvim-lsp-signature-help' } }
