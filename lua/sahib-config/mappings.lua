@@ -16,3 +16,6 @@ vim.keymap.set('n', '<leader>b', builtin.buffers)
 -- Nvim Tree
 vim.keymap.set('n', '<leader>1', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>2', ':NvimTreeFindFile<cr>')
+
+-- Gitsigns
+vim.keymap.set('n', '<leader>gb', ':Gitsigns toggle_current_line_blame<cr>')
