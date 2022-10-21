@@ -6,10 +6,13 @@ return require('packer').startup(function (use)
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = 'nvim-lua/plenary.nvim' }
 
   -- Visuals
-  use 'folke/tokyonight.nvim'
   use 'nvim-lualine/lualine.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'lewis6991/gitsigns.nvim', tag = 'release' }
+
+  -- Color Schemes
+  use 'folke/tokyonight.nvim'
+  use 'ellisonleao/gruvbox.nvim'
 
   -- LSP
   use { 'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig' }
