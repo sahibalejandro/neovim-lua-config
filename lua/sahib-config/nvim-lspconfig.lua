@@ -16,6 +16,9 @@ local on_attach = function (client, buffer)
   vim.keymap.set('n', '<leader>lR', vim.lsp.buf.references, opts)
   vim.keymap.set('n', '<leader>lR', vim.lsp.buf.type_definition, opts)
   vim.keymap.set('n', '<leader>li', vim.diagnostic.open_float, opts)
+  vim.keymap.set('n', '<leader>ln', vim.diagnostic.goto_next, opts)
+  vim.keymap.set('n', '<leader>lp', vim.diagnostic.goto_prev, opts)
+  vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist, opts)
 end
 
 local serverOptions = {
