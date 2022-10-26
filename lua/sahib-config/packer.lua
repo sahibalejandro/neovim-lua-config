@@ -12,7 +12,6 @@ return require('packer').startup(function (use)
 
   -- Color Schemes
   use 'folke/tokyonight.nvim'
-  use 'ellisonleao/gruvbox.nvim'
 
   -- LSP
   use { 'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig' }
