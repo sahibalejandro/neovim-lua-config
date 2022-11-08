@@ -18,3 +18,7 @@ vim.o.expandtab = true
 -- Search
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+-- Scroll
+vim.o.scrolloff = 5
+vim.o.sidescrolloff = 5
