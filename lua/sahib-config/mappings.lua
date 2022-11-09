@@ -19,3 +19,6 @@ vim.keymap.set('n', '<leader>2', ':NvimTreeFindFile<cr>')
 
 -- Gitsigns
 vim.keymap.set('n', '<leader>gb', ':Gitsigns toggle_current_line_blame<cr>')
+
+-- LazyGit
+vim.keymap.set('n', '<leader>lg', ':terminal lazygit<cr>i')
