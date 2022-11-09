@@ -39,3 +39,6 @@ lspConfig.tsserver.setup(serverOptions);
 
 -- Vue.js
 lspConfig.volar.setup(serverOptions);
+
+-- CSS
+lspConfig.cssls.setup(serverOptions);
