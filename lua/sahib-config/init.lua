@@ -15,6 +15,7 @@ require 'sahib-config.emmet-vim'
 require 'sahib-config.gitsigns'
 require 'sahib-config.lualine'
 require 'sahib-config.tokyonight'
+require 'sahib-config.lazygit'
 
 -- Options needed to be set after plugins configurations
 require 'sahib-config.vim-options-after'
