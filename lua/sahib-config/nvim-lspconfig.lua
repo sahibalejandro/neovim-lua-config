@@ -37,8 +37,11 @@ local lspConfig = require('lspconfig')
 -- TypeScript (js, jsx, ts, tsx)
 lspConfig.tsserver.setup(serverOptions);
 
+-- Flow
+-- lspConfig.flow.setup(serverOptions);
+
 -- Vue.js
-lspConfig.volar.setup(serverOptions);
+lspConfig.vls.setup(serverOptions);
 
 -- CSS
 lspConfig.cssls.setup(serverOptions);
