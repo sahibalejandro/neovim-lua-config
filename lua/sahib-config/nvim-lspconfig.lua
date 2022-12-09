@@ -41,7 +41,7 @@ lspConfig.tsserver.setup(serverOptions);
 -- lspConfig.flow.setup(serverOptions);
 
 -- Vue.js
-lspConfig.volar.setup(serverOptions);
+lspConfig.vuels.setup(serverOptions);
 
 -- CSS
 lspConfig.cssls.setup(serverOptions);
