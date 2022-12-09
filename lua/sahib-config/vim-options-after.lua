@@ -2,6 +2,8 @@
 vim.o.mouse = ''
 vim.o.wrap = false
 vim.o.swapfile = false
+vim.o.writebackup = false
+vim.o.updatetime = 250
 
 -- Visuals
 vim.o.background = 'dark'
