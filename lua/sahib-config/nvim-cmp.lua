@@ -10,6 +10,13 @@ vim.keymap.set('n', '<leader>ac', toggle_nvim_cmp_enabled)
 
 local cmp = require 'cmp'
 cmp.setup({
+  -- REQUIRED: Snippet engine is required.
+  snippet = {
+    expand = function(args)
+      vim.fn['UltiSnips#Anon'](args.body)
+    end,
+  },
+
   enabled = function()
     return vim.g.sahib_nvim_cmp_enabled
   end,
@@ -25,5 +32,7 @@ cmp.setup({
   }),
 
   -- To enable mappings in insert mode and allow completion options to be selected.
-  mapping = cmp.mapping.preset.insert(),
+  mapping = cmp.mapping.preset.insert({
+    ['<CR>'] = cmp.mapping.confirm({ select = true })
+  }),
 })

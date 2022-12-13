@@ -20,4 +20,5 @@ return require('packer').startup(function (use)
   -- Autocompletion
   use { 'hrsh7th/nvim-cmp', requires = { 'hrsh7th/cmp-path', 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-nvim-lsp-signature-help' } }
   use 'mattn/emmet-vim'
+  use 'SirVer/ultisnips'
 end)
