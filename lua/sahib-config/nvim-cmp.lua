@@ -33,6 +33,6 @@ cmp.setup({
 
   -- To enable mappings in insert mode and allow completion options to be selected.
   mapping = cmp.mapping.preset.insert({
-    ['<CR>'] = cmp.mapping.confirm({ select = true })
+    ['<tab>'] = cmp.mapping.confirm({ select = true })
   }),
 })
