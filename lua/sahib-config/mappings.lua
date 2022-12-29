@@ -12,6 +12,7 @@ vim.keymap.set('n', '<leader>o', builtin.find_files)
 vim.keymap.set('n', '<leader>p', builtin.oldfiles)
 vim.keymap.set('n', '<leader>s', builtin.live_grep)
 vim.keymap.set('n', '<leader>b', builtin.buffers)
+vim.keymap.set('n', '<leader>d', builtin.lsp_document_symbols)
 
 -- Nvim Tree
 vim.keymap.set('n', '<leader>1', ':NvimTreeToggle<cr>')
