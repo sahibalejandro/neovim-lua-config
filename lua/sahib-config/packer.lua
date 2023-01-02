@@ -8,7 +8,7 @@ return require('packer').startup(function (use)
   -- Visuals
   use 'nvim-lualine/lualine.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'lewis6991/gitsigns.nvim', tag = 'release' }
+  use { 'lewis6991/gitsigns.nvim' }
 
   -- Color Schemes
   use 'folke/tokyonight.nvim'
