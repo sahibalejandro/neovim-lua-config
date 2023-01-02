@@ -1,12 +1,12 @@
-local toggle_nvim_cmp_enabled = function()
-  local enabled = not vim.g.sahib_nvim_cmp_enabled
-  vim.g.sahib_nvim_cmp_enabled = enabled
-
-  print('nvim_cmp is '..(enabled and 'enabled' or 'disabled'))
-end
-
-vim.g.sahib_nvim_cmp_enabled = false
-vim.keymap.set('n', '<leader>ac', toggle_nvim_cmp_enabled)
+--local toggle_nvim_cmp_enabled = function()
+--  local enabled = not vim.g.sahib_nvim_cmp_enabled
+--  vim.g.sahib_nvim_cmp_enabled = enabled
+--
+--  print('nvim_cmp is '..(enabled and 'enabled' or 'disabled'))
+--end
+--
+--vim.g.sahib_nvim_cmp_enabled = false
+--vim.keymap.set('n', '<leader>ac', toggle_nvim_cmp_enabled)
 
 local cmp = require 'cmp'
 cmp.setup({
@@ -17,9 +17,9 @@ cmp.setup({
     end,
   },
 
-  enabled = function()
-    return vim.g.sahib_nvim_cmp_enabled
-  end,
+  --enabled = function()
+  --  return vim.g.sahib_nvim_cmp_enabled
+  --end,
 
   -- Define the sources where completion options will be pulled.
   sources = cmp.config.sources({
