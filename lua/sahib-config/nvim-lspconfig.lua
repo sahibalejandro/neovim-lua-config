@@ -34,11 +34,19 @@ local serverOptions = {
 
 local lspConfig = require('lspconfig')
 
--- TypeScript (js, jsx, ts, tsx)
-lspConfig.tsserver.setup(serverOptions);
+-- TypeScript (ts, tsx)
+lspConfig.tsserver.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {
+    'typescript',
+    'typescriptreact',
+    'typescript.tsx'
+  }
+});
 
 -- Flow
--- lspConfig.flow.setup(serverOptions);
+lspConfig.flow.setup(serverOptions);
 
 -- Vue.js
 lspConfig.volar.setup(serverOptions);
