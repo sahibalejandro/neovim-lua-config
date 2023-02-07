@@ -1,6 +1,7 @@
 local null_ls = require('null-ls')
 
 local eslint_config_files = {
+  '.eslintrc', -- not standard, but some projects have it
   '.eslintrc.js',
   '.eslintrc.cjs',
   '.eslintrc.yml',
@@ -22,20 +23,37 @@ local prettier_config_files = {
   'prettier.config.cjs',
 }
 
-function make_condition_for(files)
+function check_for_config_files(files)
   return function(utils)
     return utils.root_has_file(files)
   end
 end
 
 null_ls.setup({
+  debug = true,
   sources = {
+    -- eslint classic
     null_ls.builtins.diagnostics.eslint_d.with({
-      condition = make_condition_for(eslint_config_files)
+      condition = function(utils)
+        return
+          not utils.root_has_file({ '.pnp.cjs' })
+          and check_for_config_files(eslint_config_files)
+      end
+    }),
+
+    -- eslint with Yarn PnP
+    null_ls.builtins.diagnostics.eslint_d.with({
+      command = 'yarn',
+      args = { 'eslint', '-f', 'json', '--stdin', '--stdin-filename', '$FILENAME' },
+      condition = function(utils)
+        return
+          utils.root_has_file({ '.pnp.cjs' })
+          and check_for_config_files(eslint_config_files)
+      end
     }),
 
     null_ls.builtins.formatting.prettierd.with({
-      condition = make_condition_for(prettier_config_files)
+      condition = check_for_config_files(prettier_config_files)
     })
   }
 })
