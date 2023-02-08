@@ -14,3 +14,4 @@ local server_options = {
 
 lsp.volar.setup(server_options)
 lsp.tsserver.setup(server_options)
+lsp.intelephense.setup(server_options)
