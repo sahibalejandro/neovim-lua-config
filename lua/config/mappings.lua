@@ -1,6 +1,12 @@
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader><leader>', ':b#<cr>')
 
+-- Move text up and down
+vim.keymap.set('n', '<c-j>', ':m .+1<cr>==')
+vim.keymap.set('n', '<c-k>', ':m .-2<cr>==')
+vim.keymap.set('v', '<c-j>', ":m '>+1<cr>gv=gv")
+vim.keymap.set('v', '<c-k>', ":m '<-2<cr>gv=gv")
+
 -- Telescope
 local telescope = require('telescope.builtin')
 vim.keymap.set('n', '<leader>o', telescope.find_files) -- open file
