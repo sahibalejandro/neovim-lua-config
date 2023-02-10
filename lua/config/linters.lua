@@ -27,14 +27,14 @@ null_ls.setup({
   debug = true,
   sources = {
     -- eslint classic
-    null_ls.builtins.diagnostics.eslint_d.with({
+    null_ls.builtins.diagnostics.eslint.with({
       condition = function(utils)
         return not utils.root_has_file({ '.pnp.cjs' }) and utils.root_has_file(eslint_config_files)
       end
     }),
 
     -- eslint with Yarn PnP
-    null_ls.builtins.diagnostics.eslint_d.with({
+    null_ls.builtins.diagnostics.eslint.with({
       command = 'yarn',
       args = { 'eslint', '-f', 'json', '--stdin', '--stdin-filename', '$FILENAME' },
       condition = function(utils)
