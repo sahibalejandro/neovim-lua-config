@@ -23,21 +23,13 @@ local prettier_config_files = {
   'prettier.config.cjs',
 }
 
-function check_for_config_files(files)
-  return function(utils)
-    return utils.root_has_file(files)
-  end
-end
-
 null_ls.setup({
   debug = true,
   sources = {
     -- eslint classic
     null_ls.builtins.diagnostics.eslint_d.with({
       condition = function(utils)
-        return
-          not utils.root_has_file({ '.pnp.cjs' })
-          and check_for_config_files(eslint_config_files)
+        return not utils.root_has_file({ '.pnp.cjs' }) and utils.root_has_file(eslint_config_files)
       end
     }),
 
@@ -46,14 +38,14 @@ null_ls.setup({
       command = 'yarn',
       args = { 'eslint', '-f', 'json', '--stdin', '--stdin-filename', '$FILENAME' },
       condition = function(utils)
-        return
-          utils.root_has_file({ '.pnp.cjs' })
-          and check_for_config_files(eslint_config_files)
+        return utils.root_has_file({ '.pnp.cjs' }) and utils.root_has_file(eslint_config_files)
       end
     }),
 
     null_ls.builtins.formatting.prettierd.with({
-      condition = check_for_config_files(prettier_config_files)
+      condition = function(utils)
+        return utils.root_has_file(prettier_config_files)
+      end
     })
   }
 })
