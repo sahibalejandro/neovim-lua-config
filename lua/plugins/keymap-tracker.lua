@@ -14,11 +14,9 @@ function M.keymap(description, mode, keymap, command, options)
 end
 
 function M.open()
-  local buf = vim.api.nvim_create_buf(false, true)
-
-  -- todo: calculate the longest keymap to know in wich column the descriptions will be printed.
-  local buf_lines = { 'List of tracked keymaps - Press q to close', '' }
   local max_keymap_len = 0
+  local buf = vim.api.nvim_create_buf(false, true)
+  local buf_lines = { 'List of tracked keymaps - Press q to close', '' }
 
   for i,keymap in ipairs(keymaps) do
     local keymap_len = string.len(keymap.keymap)
@@ -27,7 +25,13 @@ function M.open()
 
   for i,keymap in ipairs(keymaps) do
     local spacing = string.rep(' ', max_keymap_len - string.len(keymap.keymap) + 2)
-    buf_lines[#buf_lines + 1] = " " .. keymap.mode .. "  " .. keymap.keymap .. spacing .. keymap.description
+
+    buf_lines[#buf_lines + 1] = " "
+      .. keymap.mode
+      .. "  "
+      .. keymap.keymap
+      .. spacing
+      .. keymap.description
   end
 
   -- Calculate the width, height and positon of the
@@ -50,7 +54,9 @@ function M.open()
   vim.api.nvim_buf_set_lines(buf, 0, 0, nil, buf_lines)
   vim.api.nvim_buf_set_option(buf, 'modifiable', false)
 
-  vim.keymap.set('n', 'q', function () vim.api.nvim_win_close(win, true) end, { buffer = buf })
+  vim.keymap.set('n', 'q', function()
+    vim.api.nvim_win_close(win, true)
+  end, { buffer = buf })
 end
 
 function M.setup(options)
