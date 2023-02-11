@@ -2,7 +2,7 @@ require('mason').setup()
 require('mason-lspconfig').setup()
 
 local lsp = require('lspconfig')
-local mappings = require('config.mappings')
+local mappings = require('user.mappings')
 local cmp_nvim_lsp = require('cmp_nvim_lsp')
 
 -- General options for all servers
