@@ -34,6 +34,9 @@ map('Show git diff for current file', 'n', '<leader>gd', gitsigns.diffthis) -- g
 map('Open file diagnostics', 'n', '<leader>da', ':TroubleToggle document_diagnostics<cr>') -- diagnostic all
 map('Search for references of the symbol under the cursor', 'n', '<leader>lR', ':TroubleToggle lsp_references<cr>') -- lsp references of the word under the cursor
 
+-- LazyGit
+map('Open LazyGit', 'n', '<leader>lg', ':LazyGit<cr>')
+
 -- Export mapping functions to be used within other plugins config files.
 return {
   lsp_mappings = function (keymap_opts)

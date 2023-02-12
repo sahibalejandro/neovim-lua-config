@@ -58,4 +58,11 @@ return require('packer').startup(function (use)
       'hrsh7th/cmp-nvim-lsp-signature-help',
     }
   }
+
+  use {
+    '~/.config/nvim/lua/plugins/lazygit.nvim',
+    config = function()
+      require('lazygit').setup()
+    end
+  }
 end)
