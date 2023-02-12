@@ -1,4 +1,4 @@
-local keymap_tracker = require('plugins.keymap-tracker')
+local keymap_tracker = require('keymap-tracker')
 keymap_tracker.setup()
 
 local map = keymap_tracker.keymap
@@ -36,6 +36,9 @@ map('Search for references of the symbol under the cursor', 'n', '<leader>lR', '
 
 -- LazyGit
 map('Open LazyGit', 'n', '<leader>lg', ':LazyGit<cr>')
+
+-- Keymap Tracker
+map('Open Keymap Tracker', 'n', '<leader>cs', ':KeymapTracker<cr>')
 
 -- Export mapping functions to be used within other plugins config files.
 return {

@@ -49,11 +49,8 @@ function M.open()
   end, { buffer = buf })
 end
 
-function M.setup(options)
-  options = options or {}
-  options.keymap = options.keymap or '<leader>cs'
-
-  M.keymap('Open Keymap Tracker', 'n', options.keymap, M.open, {})
+function M.setup()
+  vim.api.nvim_create_user_command('KeymapTracker', M.open, { desc = 'Open Keymap Tracker' })
 end
 
 return M
