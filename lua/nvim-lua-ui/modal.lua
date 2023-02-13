@@ -19,7 +19,7 @@ local function make_win_opts(opts)
   local height = value(opts, 'height')
 
   if width == nil then
-    width = vim.o.columns * value(opts, 'width_percent')
+    width = math.floor(vim.o.columns * value(opts, 'width_percent'))
   end
 
   local col = vim.o.columns / 2 - width / 2
