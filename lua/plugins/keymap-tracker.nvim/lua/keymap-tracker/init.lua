@@ -3,7 +3,22 @@ local modal = require('nvim-lua-ui.modal')
 local M = {}
 local keymaps = {}
 
+function M.keymap_exists(mode, keymap)
+  for i,stored_keymap in pairs(keymaps) do
+    if stored_keymap.mode == mode and stored_keymap.keymap == keymap then
+      return true
+    end
+  end
+
+  return false
+end
+
 function M.keymap(description, mode, keymap, command, options)
+  -- Do not add the same mapping twice.
+  if M.keymap_exists(mode, keymap) then
+    return
+  end
+
   vim.keymap.set(mode, keymap, command, options)
 
   keymaps[#keymaps + 1] = {
