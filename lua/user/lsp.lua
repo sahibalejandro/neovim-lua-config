@@ -33,7 +33,11 @@ local tsserver_options = {
 }
 
 lsp.flow.setup(common_options)
+lsp.cssls.setup(common_options)
 lsp.volar.setup(common_options)
 lsp.lua_ls.setup(common_options)
+lsp.svelte.setup(common_options)
+lsp.csharp_ls.setup(common_options)
 lsp.tsserver.setup(tsserver_options)
 lsp.intelephense.setup(common_options)
+lsp.cssmodules_ls.setup(common_options)
