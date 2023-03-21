@@ -14,12 +14,12 @@ function M.keymap_exists(mode, keymap)
 end
 
 function M.keymap(description, mode, keymap, command, options)
-  -- Do not add the same mapping twice.
+  vim.keymap.set(mode, keymap, command, options)
+
+  -- Do not add the mapping to keymaps if it already exists.
   if M.keymap_exists(mode, keymap) then
     return
   end
-
-  vim.keymap.set(mode, keymap, command, options)
 
   keymaps[#keymaps + 1] = {
     mode = mode,
