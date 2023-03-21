@@ -47,6 +47,7 @@ return {
     map('Format code', 'n', '<leader>lf', vim.lsp.buf.format, keymap_opts) -- lsp format
     map('Signature info', 'n', '<leader>li', vim.lsp.buf.hover, keymap_opts) -- lsp info
     map('Document symbols', 'n', '<leader>ls', telescope.lsp_document_symbols, keymap_opts) -- lsp file symbols
-    map('Go to definition', 'n', '<leader>ld', vim.lsp.buf.definition) -- go to definition
+    map('Go to definition', 'n', '<leader>ld', vim.lsp.buf.definition, keymap_opts) -- go to definition
+    map('Go to implementation', 'n', '<leader>lm', vim.lsp.buf.implementation, keymap_opts) -- go to implementation
   end
 }
