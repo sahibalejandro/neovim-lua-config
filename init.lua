@@ -1,14 +1,21 @@
-require 'user.options'
-require 'user.packer'
+vim.g.mapleader = " "
 
-require 'user.nvim-treesitter'
-require 'user.telescope'
-require 'user.nvim-tree'
-require 'user.lualine'
-require 'user.gitsigns'
+-- Configuration for NvimTree to make it work nicer.
+vim.o.loaded_netrw = 1
+vim.o.loaded_netrwPlugin = 1
+vim.o.termguicolors = true
 
-require 'user.nvim-cmp'
-require 'user.lsp'
-require 'user.linters'
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.signcolumn = "yes"
+vim.o.cursorline = true
 
-require 'user.mappings'
+vim.o.expandtab = true
+vim.o.tabstop = 2
+vim.o.smartindent = true
+vim.o.shiftwidth = vim.o.tabstop
+
+vim.keymap.set("i", "jk", "<esc>")
+vim.keymap.set("n", "<leader><leader>", "<cmd>b#<cr>")
+
+require("lazy-nvim")
