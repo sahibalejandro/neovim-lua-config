@@ -2,7 +2,7 @@ return {
   "folke/tokyonight.nvim",
 
   opts = {
-    style = "day",
+    style = "storm",
   },
 
   config = function (_, opts)

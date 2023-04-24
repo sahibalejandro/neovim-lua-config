@@ -2,7 +2,8 @@ return {
   "neovim/nvim-lspconfig",
 
   config = function ()
-    vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+    vim.keymap.set("n", "<leader>lq", vim.diagnostic.setloclist)
+    vim.keymap.set("n", "<leader>lo", vim.diagnostic.open_float)
 
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
