@@ -17,6 +17,9 @@ return {
         vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, opts)
         vim.keymap.set('n', '<leader>ls', vim.lsp.buf.signature_help, opts)
         vim.keymap.set('n', '<leader>ltd', vim.lsp.buf.type_definition, opts)
+        vim.keymap.set('n', '<leader>f', function ()
+          vim.lsp.buf.format({ async = true })
+        end, opts)
       end,
     })
   end,
