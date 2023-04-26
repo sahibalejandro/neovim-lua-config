@@ -1,20 +1,34 @@
+-- General options
 vim.g.mapleader = " "
-
--- Configuration for NvimTree to make it work nicer.
-vim.o.loaded_netrw = 1
-vim.o.loaded_netrwPlugin = 1
-vim.o.termguicolors = true
-
+vim.o.mouse = ""
+vim.o.wrap = false
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.signcolumn = "yes"
-vim.o.cursorline = true
+vim.o.swapfile = false
+vim.o.scrolloff = 5
+vim.o.sidescrolloff = vim.o.scrolloff
+vim.o.splitright = true
+vim.o.splitbelow = true
 
-vim.o.expandtab = true
+-- (Nvim Tree) Disable netrw: https://github.com/nvim-tree/nvim-tree.lua#setup
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- Colors
+vim.o.termguicolors = true
+
+-- Indentation
 vim.o.tabstop = 2
+vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.shiftwidth = vim.o.tabstop
 
+-- Search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+-- General keymaps
 vim.keymap.set("i", "jk", "<esc>")
 vim.keymap.set("n", "<leader><leader>", "<cmd>b#<cr>")
 
