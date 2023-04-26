@@ -6,7 +6,7 @@ return {
 
   opts = {
     sections = {
-      lualine_a = { "%f" },
+      lualine_a = { "%f %m%r%h%w" },
       lualine_b = { "branch", "diff" },
       lualine_c = { },
       lualine_x = { "diagnostics", "filetype" },
