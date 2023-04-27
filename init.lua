@@ -10,6 +10,7 @@ vim.o.scrolloff = 5
 vim.o.sidescrolloff = vim.o.scrolloff
 vim.o.splitright = true
 vim.o.splitbelow = true
+vim.o.cursorline = true
 
 -- (Nvim Tree) Disable netrw: https://github.com/nvim-tree/nvim-tree.lua#setup
 vim.g.loaded_netrw = 1
