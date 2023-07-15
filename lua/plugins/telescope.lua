@@ -17,4 +17,16 @@ return {
     -- Searches for the string under the cursor or selection.
     { "<leader>k", "<cmd>Telescope grep_string<cr>"},
   },
+
+  config = function ()
+    local trouble = require("trouble.providers.telescope")
+
+    require("telescope").setup({
+      defaults = {
+        mappings = {
+          n = { ["<C-t>"] = trouble.open_with_trouble }
+        },
+      },
+    })
+  end,
 }
