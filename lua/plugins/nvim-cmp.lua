@@ -28,12 +28,15 @@ return {
         { name = 'path' },
         { name = 'nvim_lsp' },
         { name = 'nvim_lsp_signature_help' }
+      }, {
+        { name = 'buffer' }
       }),
 
       mapping = cmp.mapping.preset.insert({
-        ['<c-j>'] = cmp.mapping.scroll_docs(1),
-        ['<c-k>'] = cmp.mapping.scroll_docs(-1),
-        ['<tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-j>'] = cmp.mapping.scroll_docs(1),
+        ['<C-k>'] = cmp.mapping.scroll_docs(-1),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
       })
     })
   end
