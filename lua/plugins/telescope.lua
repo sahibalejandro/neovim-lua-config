@@ -26,6 +26,9 @@ return {
         mappings = {
           n = { ["<C-t>"] = trouble.open_with_trouble }
         },
+
+        layout_strategy = "vertical",
+        layout_config = { width = 0.9 },
       },
     })
   end,
