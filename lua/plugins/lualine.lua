@@ -14,7 +14,7 @@ return {
           'NvimTree'
         },
         -- set section_separators to empty string to avoid breaking the startup screen.
-        section_separators = ''
+        -- section_separators = ''
       },
 
       sections = {
