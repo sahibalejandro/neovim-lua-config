@@ -31,6 +31,8 @@ vim.o.smartcase = true
 
 -- General keymaps
 vim.keymap.set("i", "jk", "<esc>")
-vim.keymap.set("n", "<leader><leader>", "<cmd>b#<cr>")
+vim.keymap.set("n", "<leader><leader>", ":b#<cr>")
+-- Sort visual selected lines by length
+vim.keymap.set("v", "<leader>s", ":!awk '{ print length(), $0 | \"sort -n | cut -d\\\\  -f2-\" }'<cr>")
 
 require("lazy-nvim")
