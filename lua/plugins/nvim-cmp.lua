@@ -6,6 +6,7 @@ return {
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-nvim-lsp-signature-help",
+    "quangnguyen30192/cmp-nvim-ultisnips",
   },
 
   config = function ()
@@ -27,16 +28,14 @@ return {
       sources = cmp.config.sources({
         { name = 'path' },
         { name = 'nvim_lsp' },
-        { name = 'nvim_lsp_signature_help' }
+        { name = 'ultisnips' },
+        { name = 'nvim_lsp_signature_help' },
       }, {
         { name = 'buffer' }
       }),
 
       mapping = cmp.mapping.preset.insert({
-        ['<C-j>'] = cmp.mapping.scroll_docs(1),
-        ['<C-k>'] = cmp.mapping.scroll_docs(-1),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<tab>'] = cmp.mapping.confirm({ select = true }),
       })
     })
   end

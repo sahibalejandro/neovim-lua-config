@@ -35,4 +35,7 @@ vim.keymap.set("n", "<leader><leader>", ":b#<cr>")
 -- Sort visual selected lines by length
 vim.keymap.set("v", "<leader>s", ":!awk '{ print length(), $0 | \"sort -n | cut -d\\\\  -f2-\" }'<cr>")
 
+vim.g.UltiSnipsJumpForwardTrigger = "<tab>"
+vim.g.UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
 require("lazy-nvim")
