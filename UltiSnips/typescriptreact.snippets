@@ -1,0 +1,16 @@
+extends javascriptreact, typescript, javascript
+
+priority 1
+
+snippet cmp "Component"
+type Props = {
+};
+
+export default function ${1:ComponentName}(props: Props) {
+	return (
+		<$2>
+			$0
+		</$2>
+	);
+}
+endsnippet

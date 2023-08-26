@@ -1,0 +1,5 @@
+extends javascript
+
+snippet state
+const [$1, use${1/\w+/\u$0/}] = useState($0);
+endsnippet

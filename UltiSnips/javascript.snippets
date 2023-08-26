@@ -1,0 +1,13 @@
+snippet fn "New Function"
+function $1($2) {
+	$0
+}
+endsnippet
+
+snippet try "Try-Catch Block"
+try {
+	${0:${VISUAL}}
+} catch (e) {
+	console.error(\`Something went wrong: \$\{e.message || e}\`);
+}
+endsnippet

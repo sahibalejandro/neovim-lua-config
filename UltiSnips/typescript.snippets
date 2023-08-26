@@ -1,0 +1,11 @@
+extends javascript
+
+priority 1
+
+snippet try "Try-Catch Block"
+try {
+	${0:${VISUAL}}
+} catch (e) {
+	console.error(\`Something went wrong: \$\{(e as Error).message || e}\`);
+}
+endsnippet
