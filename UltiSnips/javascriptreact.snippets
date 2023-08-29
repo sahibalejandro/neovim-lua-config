@@ -1,5 +1,9 @@
 extends javascript
 
-snippet state
+snippet state "useState"
 const [$1, use${1/\w+/\u$0/}] = useState($0);
+endsnippet
+
+snippet ctx "useContext"
+const $1 = useContext($1Context);
 endsnippet

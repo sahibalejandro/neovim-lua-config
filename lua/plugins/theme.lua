@@ -9,7 +9,7 @@ return {
       transparent = true,
       on_highlights = function (hl, color)
         hl.CursorLine = {
-          bg = "#202334"
+          bg = "#26293A"
         }
         hl.TelescopeBorder = {
           fg = "#88A0EB",
