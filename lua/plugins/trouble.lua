@@ -6,7 +6,7 @@ return {
   },
 
   keys = {
-    { "<leader>lR", "<cmd>TroubleToggle lsp_references<cr>" },
-    { "<leader>ld", "<cmd>TroubleToggle lsp_definitions<cr>" },
+    { "<leader>lR", "<cmd>Trouble lsp_references<cr>" },
+    { "<leader>ld", "<cmd>Trouble lsp_definitions<cr>" },
   },
 }
