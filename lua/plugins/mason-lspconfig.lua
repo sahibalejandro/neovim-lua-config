@@ -3,17 +3,34 @@ return {
 
   dependencies = {
     "williamboman/mason.nvim",
+    "neovim/nvim-lspconfig",
+    "hrsh7th/cmp-nvim-lsp",
   },
 
-  config = function ()
+  config = function()
     require("mason-lspconfig").setup()
-    require("mason-lspconfig").setup_handlers({
-      function (server_name)
-        -- Add CMP capabilities to LSP servers.
-        local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        require("lspconfig")[server_name].setup({
-          capabilities = capabilities
-        })
+
+    local lspconfig = require("lspconfig")
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+    lspconfig.tsserver.setup({
+      capabilities = capabilities,
+    })
+
+    -- Global Keymaps
+    vim.keymap.set("n", "<leader>lo", vim.diagnostic.open_float)
+
+    vim.api.nvim_create_autocmd("LspAttach", {
+      group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+      callback = function(event)
+        -- Buffer local mappings
+        local options = { buffer = event.buf }
+        vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, options)
+        vim.keymap.set("n", "<leader>lt", vim.lsp.buf.type_definition, options)
+        vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, options)
+        vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, options)
+        vim.keymap.set("n", "<leader>lR", vim.lsp.buf.references, options)
+        vim.keymap.set("n", "<leader>li", vim.lsp.buf.hover, options)
       end,
     })
   end,
