@@ -25,11 +25,9 @@ return {
       callback = function(event)
         -- Buffer local mappings
         local options = { buffer = event.buf }
-        vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, options)
         vim.keymap.set("n", "<leader>lt", vim.lsp.buf.type_definition, options)
         vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, options)
         vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, options)
-        vim.keymap.set("n", "<leader>lR", vim.lsp.buf.references, options)
         vim.keymap.set("n", "<leader>li", vim.lsp.buf.hover, options)
       end,
     })
