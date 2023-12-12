@@ -3,6 +3,7 @@ return {
 
   dependencies = {
     "SirVer/ultisnips",
+    "quangnguyen30192/cmp-nvim-ultisnips",
   },
 
   config = function()
@@ -16,6 +17,7 @@ return {
       },
 
       sources = cmp.config.sources({
+        { name = 'ultisnips' },
         { name = "nvim_lsp" },
       }, {
         name = "buffer",
