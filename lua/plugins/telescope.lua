@@ -2,17 +2,23 @@ return {
   "nvim-telescope/telescope.nvim",
 
   branch = "0.1.x",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+  },
 
   config = function()
+    local telescope = require("telescope")
     local builtin = require("telescope.builtin")
 
-    require("telescope").setup({
+    telescope.setup({
       defaults = {
         layout_strategy = "vertical",
         layout_config = { width = 0.9 },
       },
     })
+
+    telescope.load_extension("fzf")
 
     vim.keymap.set("n", "<leader>o", builtin.find_files)
     vim.keymap.set("n", "<leader>k", builtin.grep_string)
